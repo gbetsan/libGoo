@@ -11,7 +11,6 @@
       <change type="DELETED" beforePath="C:\Users\grig\RubymineProjects\libGooGEM\.idea\scopes\scope_settings.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\grig\RubymineProjects\libGooGEM\.idea\vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\grig\RubymineProjects\libGooGEM\.idea\workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="libGooGEM.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -289,7 +288,7 @@
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjHackEx" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -407,7 +406,7 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\grig\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -428,7 +427,13 @@
       <option name="project" value="LOCAL" />
       <updated>1444477868389</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="New commit">
+      <created>1444477986583</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1444477986583</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
