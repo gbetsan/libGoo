@@ -1,4 +1,3 @@
 module LibGoo
-  class LibGooError < StandardError
-  end
+  LibGooError = Class.new(StandardError)
 end
