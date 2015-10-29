@@ -29,5 +29,6 @@ User.Do(email, password) do |http, auth_token, user_info, user| #Loggining to us
   #Sending 1 BTC to me^^^^^                                       #You can dont care about adding this user as contact, it's cayman too
 end
 
-
+#LibGooHelper.no_error(http, HackEx::Request.VictimInfo(auth_token, 1001)) #No error processor, it wont stop your script if you will catch some error
+#If something went wrong it will return something like that: {'success' => false, 'error' => 'Not OK: ..., ... .'}
 
