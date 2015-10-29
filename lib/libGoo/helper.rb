@@ -39,6 +39,15 @@ module LibGoo
         false
       end
 
+      def no_error(http, request)
+        response = http.request(request)
+        if response.is_a? Net::HTTPOK
+          JSON.parse(response.body)
+        else
+          {'success' => false, 'error' => "Not OK: #{response.inspect}, #{response.body}"}
+        end
+      end
+
       def MassScanner(auth_token, array, display = false) #Array is array of scanned IDs like [minimum, maximum] ([1001, 1100])
         errors = []
         cur_id, max = array
@@ -65,7 +74,7 @@ module LibGoo
           if obj.is_a?(Fixnum) || obj.is_a?(String) || obj.is_a?(Array)
             result << obj
           elsif LibGoo::ObjectProcessor.descendants.include?(obj.class)
-            return obj.get_var(obj.class.class_variable_get(:@@important))
+              return obj.get_var(obj.instance_variable_get(:@raise_if))
           else
             raise LibGooError, 'Undefined class object given as one of params: ' + obj.class.to_s
           end

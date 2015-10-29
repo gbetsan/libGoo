@@ -4,6 +4,7 @@ module LibGoo
 
     def initialize(params, raise_if)
       if params.is_a?(Hash) || params.is_a?(JSON)
+        @raise_if = raise_if
         raise LibGooError, "No specified key #{raise_if} in params"  unless params.has_key?(raise_if) && raise_if
         @params = params
       else
@@ -12,7 +13,8 @@ module LibGoo
     end
 
     def method_missing(m, *args)
-      return self.get_var(m) if self.get_var(m)
+      var = self.get_var(m)
+      return var if var
       super
     end
 
@@ -30,23 +32,20 @@ module LibGoo
       ObjectSpace.each_object(Class).select { |klass| klass < self }
     end
 
-    def self.parent
-      LibGoo::ObjectProcessor
-    end
   end
 
   class Victim < ObjectProcessor
-    @@important = 'user_id'
     def initialize(params)
-      super(params, @@important)
+      @raise_if = 'user_id'
+      super(params, @raise_if)
     end
 
   end
 
   class Processes < ObjectProcessor
-    @@important = 'id'
     def initialize(params)
-      super(params, @@important)
+      @raise_if = 'id'
+      super(params, @raise_if)
     end
   end
 end

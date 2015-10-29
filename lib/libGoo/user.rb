@@ -23,7 +23,7 @@ class User
     if HackEx::Request.respond_to?(m)
       HackEx::Request.Do(@http, HackEx::Request.method(m).call(@auth_token, *LibGooHelper.params(*args)))
     else
-      raise LibGooError, "Undefined method '#{m}' for class LibGoo::User or class HackEx::Request"
+      super
     end
   end
 
