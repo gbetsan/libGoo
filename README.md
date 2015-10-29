@@ -8,4 +8,4 @@ This gem was developed to ease your HackEx scripting, it also has full HackEx AP
 
 ## Usage examples
 
-See bin/example.rb
+See example/example.rb
